@@ -1,0 +1,149 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    width:  100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  body {
+    background-color: #2e2929;
+    width:  100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  h1 {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #c2c2c2;
+  }
+  
+  form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, -75%);
+    color: white;
+    max-width: 400px;
+    max-height: 400px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 20% 0;
+  }
+  
+  #congratsForm{
+    display: none;
+  }
+  
+  .container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 2px;
+    padding: 2px;
+    width: 70%;
+    height: 60%;
+    max-width: 400px;
+    max-height: 400px; 
+    opacity: 1;
+  }
+  
+  .container div {
+    border: 2px solid;
+    min-width: 50px;
+    max-width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    text-align: center;
+    font-size: 25px;
+    
+    border-radius: 3px;
+    border-color: #3d3d3d;
+    color: #c2c2c2;
+  }
+  
+  
+  .keyboard{
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    margin: 1%;
+    max-width: 700px;
+    
+  }
+  
+  .rowOne {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100%;
+    
+  }
+  
+  .rowTwo, .rowThree {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+  }
+  
+  .rowTwo {
+    width: 90%;
+    margin-left: 5%;
+  }
+  
+  .rowThree {
+    width: 100%;
+  }
+  
+  .func {
+    background-color: #556277;
+    width: 100%;
+  }
+  
+  .grid-item {
+  
+    font-size: 50px;
+    text-align: center;
+    transition-duration: 1s;
+  }
+  
+  .canvas {
+    transition-duration: 5s;
+  }
+  
+  button {
+    height: 60px;
+    background-color: #484b5b;
+    border-radius: 5px;
+    border: 3px solid;
+    font-size: 2rem;
+    color: #dbdbdb;
+    border-style: outset;
+    border-color: #2e2929;
+    width: 100%;
+  }
+  
+  .print {
+    margin: auto;
+    width: 100%;
+    border: 3px solid green;
+    padding: 10px;
+    transition-duration: 1s;
+  }
+  
