@@ -112,35 +112,39 @@ async function wordCheck() {
         document.getElementById('userScore').innerHTML = score.toFixed();
         document.getElementById('congratsForm').style.display = "inline";
     
-        // Save score to local storage
-        document.getElementById("submit").addEventListener("click", function() {
-          let username = document.getElementById("name").value;
-          let score = document.getElementById("userScore").innerText;
-          let word = document.getElementById("winningWord").innerText;
-          let guesses = button_press / 9; // Adjust based on your logic
+      //   // Save score to local storage
+      //   document.getElementById("submit").addEventListener("click", function() {
+      //     let username = document.getElementById("name").value;
+      //     let score = document.getElementById("userScore").innerText;
+      //     let word = document.getElementById("winningWord").innerText;
+      //     let guesses = button_press / 9; // Adjust based on your logic
       
-          fetch("https://your-flask-server.com/submit_score", {
-              method: "POST",
-              headers: {
-                  "Content-Type": "application/json"
-              },
-              body: JSON.stringify({
-                  username: username,
-                  score: parseInt(score),
-                  word: word,
-                  guesses: guesses
-              })
-          })
-          .then(response => response.json())
-          .then(data => {
-              console.log(data.message);
-              window.location.href = "https://build41.duncanlang.repl.co/scores.html";
-          })
-          .catch(error => console.error("Error:", error));
-      });
+      //     fetch("https://your-flask-server.com/submit_score", {
+      //         method: "POST",
+      //         headers: {
+      //             "Content-Type": "application/json"
+      //         },
+      //         body: JSON.stringify({
+      //             username: username,
+      //             score: parseInt(score),
+      //             word: word,
+      //             guesses: guesses
+      //         })
+      //     })
+      //     .then(response => response.json())
+      //     .then(data => {
+      //         console.log(data.message);
+      //         window.location.href = "https://build41.duncanlang.repl.co/scores.html";
+      //     })
+      //     .catch(error => console.error("Error:", error));
+      // });
       
     } else if (button_press > 50) {
-          alert("The word was: " + word);
+      document.getElementById('myCanvas').style.backgroundColor = "black";
+      document.getElementById('guessContainer').style.opacity = .5;
+      document.getElementById('lossWord').innerHTML = word;
+      document.getElementById('lossForm').style.display = "inline";
+          // alert("The word was: " + word);
       }
   } else {
       button_press -= 5;

@@ -47,6 +47,10 @@ html {
   #congratsForm{
     display: none;
   }
+
+  #lossForm{
+    display: none;
+  }
   
   .container {
     position: fixed;

@@ -16,16 +16,32 @@
       <h2 class="congrats">Congratulations!</h2>
       <br><br>
       <h2 class="winText">The word was:</h2>
-      <br>
       <h2 class="winText" id="winningWord"></h2>
-      <h2 class="winText">Your score was:</h2>
       <br>
+      <h2 class="winText">Your score was:</h2>
       <h2 class="winText" id="userScore"></h2>
+      <br>
       <label for="name">Enter your name for the leaderboard!</label><br>
       <input type="text" id="name" name="name" value="">
-      <br><br><br><br>
+      <br><br><br>
       <input id="submit" class="button" type="button"
         onClick="location.href= 'https://build41.duncanlang.repl.co/scores.html'" value="Submit">
+      <input type="button" onClick="location.href=location.href" value="Play Again"></input>
+    </form>
+
+    <form id="lossForm" action="/action_page.php">
+      <h2 class="loss">You'll Get it Next Time</h2>
+      <br><br>
+      <h2 class="winText">The word was:</h2>
+      <h2 class="winText" id="lossWord"></h2>
+      <!-- <h2 class="winText">Your score was:</h2> -->
+      <br>
+      <h2 class="winText" id="userScore"></h2>
+      <!-- <label for="name">Enter your name for the leaderboard!</label><br> -->
+      <!-- <input type="text" id="name" name="name" value=""> -->
+      <br><br><br><br>
+      <!-- <input id="submit" class="button" type="button" -->
+        <!-- onClick="location.href= 'https://build41.duncanlang.repl.co/scores.html'" value="Submit"> -->
       <input type="button" onClick="location.href=location.href" value="Play Again"></input>
     </form>
     
